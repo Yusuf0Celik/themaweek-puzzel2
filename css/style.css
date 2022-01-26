@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+html, body {
+  background-color: #141414;
+  color: white;
+  overflow: hidden;
+}
+
+.puzzel {
+  background-color: #ffffff30;
+  border-radius: 1rem;
+  padding: 1rem;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.alle-emojis {
+  display: flex;
+  font-size: 2rem;
+}
+
+.emojis {
+  display: flex;
+  padding: 0.75rem;
+}
+
+.emoji {
+  font-size: 2rem;
+}
+
+.woorden {
+  display: flex;
+}
+
+.emoji-woord {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.emoji-container {
+  text-align: center;
+}
+
+.emoji-container-container {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.input {
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-puzzel {
+  width: 20rem;
+  height: 2rem;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid white;
+  outline: none;
+  padding: 0.5rem;
+}
+
+.input-button {
+  width: 2rem;
+  height: 100%;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  outline: none;
+}
+
+.input-button:active {
+  background-color: #ffffff30;
+}
+
+.winner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  height: 10rem;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: red;
+  color: #fff;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.winner.active {
+  animation: winner 3s 1 1s;
+}
+
+@keyframes winner{
+  0%,100%{transform:scale(0);}
+  10%,90%{transform:scale(1);}
+}

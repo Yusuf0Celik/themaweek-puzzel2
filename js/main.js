@@ -1,14 +1,15 @@
-const winner = document.getElementById(".winner");
-const input = document.getElementById(".input-puzzel");
-const inputButton = document.getElementById(".input-button");
+const inputButton = document.querySelector(".input-button");
 
 inputButton.addEventListener("click", toggleWinner);
 
 function toggleWinner() {
-  if(input.value === '123') {
-    winner.classList.toggle("active");
-  }else {
-    winner.classList.remove("active");
+  const winner = document.querySelector(".winner");
+  const inputValue = document.querySelector(".input-puzzel").value;
+  if(inputValue === "vond je alle spellen leuk? dank je voor het spelen!"){
+    winner.classList.add("active");
+    console.log("Jij bent een winnaar!");
+  }else{
+    console.log("Verkeerd antwoord")
   }
 }
 
